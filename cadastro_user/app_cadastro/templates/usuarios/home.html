@@ -1,0 +1,24 @@
+{% extends 'usuarios/base.html' %}
+
+{% block conteudo %}
+
+<form action="{% url 'listagem_usuarios' %}" method="post"> {% csrf_token %}
+        
+        <div style="text-align: center;" class="container">
+            <br>
+            <br>    
+            <br>        
+                <h1 style="color: #fff;">Cadastro e Usuários</h1>
+                <br> 
+                <br>
+                <br>   
+                NOME <input name="nome" class="form-control-sm" type="text">
+                      
+                IDADE <input name="idade" class="form-control-sm"   type="text">
+                <br>
+                <br>
+                <button class="form-control-sm" style="background-color: #017371;">CADASTRAR</button>
+          </div>
+</form>
+
+{%endblock%}
